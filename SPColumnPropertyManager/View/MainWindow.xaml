@@ -23,7 +23,7 @@
         <Label Content="Choose List:" HorizontalAlignment="Left" Margin="23,204,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="114,208,0,0" VerticalAlignment="Top" Width="197" IsEnabled="True" ItemsSource="{Binding ListNames}" SelectedItem="{Binding SelectedList}" />
         <Button Content="Populate" HorizontalAlignment="Left" Margin="357,208,0,0" VerticalAlignment="Top" Width="75" IsEnabled="True" Command="{Binding GetFields}"/>
-        <DataGrid HorizontalAlignment="Left" Margin="49,257,0,0" VerticalAlignment="Top" Width="Auto" CanUserAddRows="False" SelectionUnit="Cell" AutoGenerateColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" ItemsSource="{Binding FieldRows}" >
+        <DataGrid HorizontalAlignment="Left" Margin="49,272,0,0" VerticalAlignment="Top" Width="Auto" CanUserAddRows="False" SelectionUnit="Cell" AutoGenerateColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" ItemsSource="{Binding FieldRows}" >
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridCell}">
                     <EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridCell_PreviewMouseLeftButtonDown"></EventSetter>
@@ -31,5 +31,6 @@
             </DataGrid.Resources>
         </DataGrid>
         <Label x:Name="LabelError" Content="" HorizontalAlignment="Left" Margin="34,173,0,0" VerticalAlignment="Top" Width="359"/>
+        <Label Content="*Note* You must click out of the row to commit the changes!" HorizontalAlignment="Left" Height="32" Margin="49,235,0,0" VerticalAlignment="Top" Width="344"/>
     </Grid>
 </Window>
